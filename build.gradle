@@ -22,11 +22,14 @@ spotless {
         endWithNewline()
     }
     java {
+        googleJavaFormat()
         indentWithTabs(2)
         indentWithSpaces(4)
+        formatAnnotations()
+        removeUnusedImports()
+        trimTrailingWhitespace()
     }
 }
-
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
